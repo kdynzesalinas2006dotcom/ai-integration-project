@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI integration project</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --muted:#9aa6b2; --accent:#00f0ff; --accent2:#8affc1; --glass: rgba(255,255,255,0.03);
+      --maxw:1000px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html,body{height:100%;}
+    body{margin:0;background:linear-gradient(180deg,#050708 0%, var(--bg) 100%);color:#e6eef6;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0077ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041018;}
+    h1{font-size:1.5rem;margin:0}
+    p.lead{color:var(--muted);margin:4px 0 0}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
+    nav a:hover{color:var(--accent);background:rgba(255,255,255,0.02)}
+
+    .hero{background:linear-gradient(90deg, rgba(0,240,255,0.06), rgba(138,255,193,0.02));padding:22px;border-radius:12px;display:flex;gap:20px;align-items:center;margin-bottom:22px}
+    .hero .intro{flex:1}
+    .cta{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--accent);font-weight:700}
+
+    main{display:grid;grid-template-columns:1fr;gap:18px}
+    section.card{background:linear-gradient(180deg,var(--card), rgba(15,23,32,0.9));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    section.card h2{margin:0 0 8px;color:var(--accent2)}
+    .meta{color:var(--muted);font-size:0.95rem;margin-bottom:12px}
+    .sub{color:var(--muted);font-size:0.98rem}
+    ul.ref{color:var(--muted);padding-left:18px}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+
+    footer{margin-top:24px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    @media(min-width:900px){
+      .wrap{padding:36px}
+      main{grid-template-columns:1fr 1fr}
+      .hero{padding:28px}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div>
+          <h1>AI integration project</h1>
+          <p class="lead">Cybersecurity portfolio: IAM · Endpoint/Mobile · Cryptography · Incident Response</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#iam">IAM</a>
+        <a href="#endpoint">Endpoint</a>
+        <a href="#crypto">Cryptography</a>
+        <a href="#ir">Incident Response</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="intro">
+        <h2 style="margin:0;color:var(--accent);">Quick overview</h2>
+        <p class="sub">This portfolio summarizes four core cybersecurity domains with short definitions, real-world examples, job roles, and notes on how AI helped research and craft the content.</p>
+      </div>
+      <div style="text-align:right">
+        <button class="cta" onclick="document.getElementById('iam').scrollIntoView({behavior:'smooth'})">Start with IAM</button>
+      </div>
+    </div>
+
+    <main>
+      <section id="iam" class="card">
+        <h2>Identity & Access Management (IAM)</h2>
+        <div class="meta">Definition</div>
+        <p>IAM is a cybersecurity framework that controls access to systems, cloud apps, networks, and assets based on each user or device's digital identity. It covers identifying users, assigning roles, granting/removing access, and maintaining secure authentication.</p>
+
+        <div class="meta">Why it matters</div>
+        <p>IAM balances security and usability: it enforces least-privilege access, supports MFA and SSO, and helps teams provision, update, and deprovision accounts to reduce unauthorized access risk.</p>
+
+        <div class="meta">Real-world example</div>
+        <p>The Colonial Pipeline ransomware attack (DarkSide) exploited credentials and access weaknesses, encrypting systems and disrupting fuel distribution—highlighting why strong IAM and MFA matter for critical infrastructure.</p>
+
+        <div class="meta">Real job</div>
+        <p><strong>IAM Analyst</strong> — manages authentication support, MFA/SSO tools, account recovery, log monitoring, and enforces secure access controls across an organization.</p>
+
+        <div class="meta">How AI helped</div>
+        <p>AI was used to research credible sources, verify facts, and expand on whether the job duties map to IAM responsibilities.</p>
+
+        <div class="meta">References</div>
+        <ul class="ref">
+          <li><a href="https://www.indeed.com/jobs?q=IAM&l=Wichita%20Falls%2C%20TX&from=searchOnHP" target="_blank" rel="noopener noreferrer">Indeed - IAM jobs</a></li>
+          <li><a href="https://www.cisa.gov/sites/default/files/2023-12/IDENTITY%20AND%20ACCESS%20MANAGEMENT%20EDUCATIONAL%20AID.pdf" target="_blank" rel="noopener noreferrer">CISA IAM Educational Aid (PDF)</a></li>
+          <li><a href="https://cybeready.com/abcs-of-identity-and-access-management/" target="_blank" rel="noopener noreferrer">Cybeready - ABCs of IAM</a></li>
+          <li><a href="https://www.crowdstrike.com/cybersecurity-101/identity-access-management-iam/" target="_blank" rel="noopener noreferrer">CrowdStrike - IAM overview</a></li>
+        </ul>
+      </section>
+
+      <section id="endpoint" class="card">
+        <h2>Endpoint & Mobile Security</h2>
+        <div class="meta">Definition</div>
+        <p>Endpoint security protects devices (laptops, desktops, mobile phones) that connect to an organization's network. Each device is an access point and potential vulnerability, so endpoints must be secured to protect the whole network.</p>
+
+        <div class="meta">Why it matters</div>
+        <p>Endpoints are often the weakest link and prime targets for attackers seeking sensitive data or a foothold into networks. Securing and monitoring endpoints reduces breach risk.</p>
+
+        <div class="meta">Real-world example</div>
+        <p>In 2018 a laptop containing over 33,000 Canadians' health data was stolen and found to be unencrypted—showing how unsecured endpoints can lead to major data breaches.</p>
+
+        <div class="meta">Real job</div>
+        <p><strong>MGR - Telecom & Endpoint</strong> — manages endpoint lifecycle, MDM, patching, compliance, VoIP hardening, and coordinates with cybersecurity teams to keep devices secure.</p>
+
+        <div class="meta">How AI helped</div>
+        <p>AI assisted in finding credible case studies and confirming that the listed job responsibilities align with endpoint and mobile security practices.</p>
+
+        <div class="meta">References</div>
+        <ul class="ref">
+          <li><a href="https://www.indeed.com/viewjob?jk=c5fe2062a7d9a2ae&tk=1ja6quqh2g2vu8a8&from=serp&vjs=3" target="_blank" rel="noopener noreferrer">Indeed - MGR Telecom & Endpoint</a></li>
+          <li><a href="https://www.currentware.com/blog/endpoint-security-incidents-throughout-history/" target="_blank" rel="noopener noreferrer">CurrentWare - Endpoint incidents</a></li>
+          <li><a href="https://www.webopedia.com/technology/endpoint-cybersecurity-explained/" target="_blank" rel="noopener noreferrer">Webopedia - Endpoint security explained</a></li>
+        </ul>
+      </section>
+
+      <section id="crypto" class="card">
+        <h2>Cryptography</h2>
+        <div class="meta">Definition</div>
+        <p>Cryptography is the practice of encoding information so only intended recipients can read it. It uses algorithms, math, and engineering to protect confidentiality, integrity, and authenticity of data in storage and transit.</p>
+
+        <div class="meta">Why it matters</div>
+        <p>Cryptography prevents unauthorized access to sensitive information and enables secure communications, e-commerce, and compliance with privacy laws (e.g., HIPAA in healthcare).</p>
+
+        <div class="meta">Real-world example</div>
+        <p>Healthcare organizations rely on cryptography to protect patient records and communications. Proper encryption is required for HIPAA compliance and to prevent data breaches.</p>
+
+        <div class="meta">Real job</div>
+        <p><strong>Application Security Engineer</strong> — ensures secure use of encryption, hashing, and cryptographic best practices in applications to protect data at rest and in transit.</p>
+
+        <div class="meta">How AI helped</div>
+        <p>AI helped locate authoritative sources about cryptography and verify that the job responsibilities match cryptography-related tasks such as secure coding, key management, and encryption use.</p>
+
+        <div class="meta">References</div>
+        <ul class="ref">
+          <li><a href="https://www.indeed.com/jobs?q=cryptography&l=Dallas%2C+TX" target="_blank" rel="noopener noreferrer">Indeed - cryptography jobs</a></li>
+          <li><a href="https://www.fortinet.com/resources/cyberglossary/what-is-cryptography" target="_blank" rel="noopener noreferrer">Fortinet - What is cryptography</a></li>
+          <li><a href="https://www.expressvpn.com/blog/what-is-cryptography/" target="_blank" rel="noopener noreferrer">ExpressVPN - Cryptography explainer</a></li>
+        </ul>
+      </section>
+
+      <section id="ir" class="card">
+        <h2>Incident Response</h2>
+        <div class="meta">Definition</div>
+        <p>Incident response is an organization's process for detecting, isolating, and recovering from cybersecurity incidents. It limits damage and restores operations when breaches, malware, or other security events occur.</p>
+
+        <div class="meta">Why it matters</div>
+        <p>Without a coordinated incident response, organizations suffer longer downtime, greater data loss, and increased legal and reputational damage. Preparedness shortens recovery time and limits impact.</p>
+
+        <div class="meta">Real-world example</div>
+        <p>CISA responded to an agency where EDR alerts revealed exploitation of a GeoServer vulnerability (CVE-2024-36401). Attackers used the flaw to access multiple servers over weeks before detection.</p>
+
+        <div class="meta">Real job</div>
+        <p><strong>Major Incident Manager</strong> — coordinates and leads the response to major incidents, ensures communication, engages technical teams, and drives service restoration following ITIL practices.</p>
+
+        <div class="meta">How AI helped</div>
+        <p>AI supported source discovery, validation, and helped summarize incident response procedures and job alignment in concise language.</p>
+
+        <div class="meta">References</div>
+        <ul class="ref">
+          <li><a href="https://www.indeed.com/jobs?q=incident+response&l=Wichita+Falls%2C+TX" target="_blank" rel="noopener noreferrer">Indeed - incident response jobs</a></li>
+          <li><a href="https://www.techtarget.com/searchsecurity/definition/incident-response" target="_blank" rel="noopener noreferrer">TechTarget - What is incident response?</a></li>
+          <li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-266a" target="_blank" rel="noopener noreferrer">CISA advisory on GeoServer exploitation</a></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      Built with AI assistance • © AI integration project
+    </footer>
+  </div>
+  <script>
+    // Smooth scroll for nav (already used by button)
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click', e=>{e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});}));
+  </script>
+</body>
+</html>
